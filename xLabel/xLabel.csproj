@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{3B38D325-1EA8-43B0-B962-ADCC3AA31E26}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <LangVersion>5</LangVersion>
+    <AssemblyName>xLabel</AssemblyName>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Design" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="xLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ellipsis.cs" />
+    <Compile Include="RegexParserHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RAdapter.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RBrush.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RColor.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RContextMenu.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RControl.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RDashStyle.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RFont.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RFontFamily.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RFontStyle.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RGraphics.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RGraphicsPath.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RImage.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RKeyEvent.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RMouseEvent.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RPen.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RPoint.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RRect.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RSize.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\ActionInt.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\ArgChecker.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\BackgroundImageDrawHandler.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\Border.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\BordersDrawHandler.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CommonUtils.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\ContextMenuHandler.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssBlock.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssBlockSelectorItem.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssBox.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssBoxFrame.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssBoxHr.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssBoxImage.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssBoxProperties.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssConstants.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssLayoutEngine.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssLayoutEngineTable.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssLength.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssLineBox.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssParser.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssRect.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssRectImage.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssRectWord.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssSpacingBox.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssUnit.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssUtils.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssValueParser.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\DomParser.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\DomUtils.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\DownloadFileAsyncCallback.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\FontsHandler.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HoverBoxBlock.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlConstants.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlGenerationStyle.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlImageLoadCallback.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlImageLoadEventArgs.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlLinkClickedEventArgs.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlLinkClickedException.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlParser.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlRefreshEventArgs.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlRenderErrorEventArgs.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlRenderErrorType.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlScrollEventArgs.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlStylesheetLoadEventArgs.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlTag.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlUtils.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\ImageDownloader.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\ImageLoadHandler.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\LinkElementData.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RegexParserUtils.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\RenderUtils.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\SelectionHandler.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\StylesheetLoadHandler.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\SubString.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssData.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\CssDefaults.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlContainerInt.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlRendererUtils.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\BitMapInfo.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\BlendFunction.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\BrushAdapter.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\ClipboardHelper.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\ContextMenuAdapter.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\ControlAdapter.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\FontAdapter.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\FontFamilyAdapter.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\GraphicsAdapter.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\GraphicsPathAdapter.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlContainer.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\HtmlRender.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\ImageAdapter.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\MetafileExtensions.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\PenAdapter.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\TextMetric.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\Utils.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\Win32Utils.cs" />
+    <Compile Include="TheArtOfDev.HtmlRenderer\WinFormsAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

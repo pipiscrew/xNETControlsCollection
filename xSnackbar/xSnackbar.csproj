@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{D8B54598-5CA0-4C40-B623-9F5805B2D5C2}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <LangVersion>5</LangVersion>
+    <AssemblyName>xSnackbar</AssemblyName>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="xSnackbar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ISnackbarOptions.cs" />
+    <Compile Include="SnackbarExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SnackbarView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LASTINPUTINFO.cs" />
+    <Compile Include="Win32.cs" />
+    <Compile Include="xButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="xFormDock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="xImageButtonExtended.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DockOptions.cs" />
+    <Compile Include="FormBorderOptions.cs" />
+    <Compile Include="ImageExtensions.cs" />
+    <Compile Include="Indicator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shadower.cs" />
+    <Compile Include="TitleBarOptions.cs" />
+    <Compile Include="WindowHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xSnackbar.Properties.Resources.resx" />
+    <EmbeddedResource Include="Utilities.xSnackbar.Indicator.resx" />
+    <EmbeddedResource Include="Utilities.xSnackbar.Views.SnackbarView.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xCommon\xCommon.csproj">
+      <Project>{2beae83a-ba59-4ef1-a0dc-34319a8c9a4a}</Project>
+      <Name>xCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
